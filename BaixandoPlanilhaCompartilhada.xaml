@@ -50,7 +50,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="802,973" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://grupometa-my.sharepoint.com/personal/karine_silva_meta_com_br/_layouts/15/onedrive.aspx?ct=1587386684164&amp;or=OWA%2DNT&amp;cid=47a031fc%2D03de%2Dc372%2Ddf0f%2D65ac47e89145&amp;originalPath=aHR0cHM6Ly9ncnVwb21ldGEtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwva2FyaW5lX3NpbHZhX21ldGFfY29tX2JyL0VxWU53ZjM0dkQ5TGs2UUNZR3BzeW1zQnMxWGt5emV4bU5NLTk0VENkQ3dTclE%5FcnRpbWU9NV9NN2lpamwxMGc&amp;sortField=Modified&amp;isAscending=false&amp;id=%2Fpersonal%2Fkarine%5Fsilva%5Fmeta%5Fcom%5Fbr%2FDocuments%2FDIGITAL%20CENTER%2F1%2E%20SICREDI%2FCONTAS%20A%20PAGAR%2FContas%20a%20Pagar%20%2D%20Lan%C3%A7amentos%2F3%2E%20Performance%20por%20usu%C3%A1rio%2FPerfomance%20Diaria">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="802,973" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://grupometa-my.sharepoint.com/personal/karine_silva_meta_com_br/_layouts/15/onedrive.aspx?ct=1587386684164&amp;or=OWA%2DNT&amp;cid=47a031fc%2D03de%2Dc372%2Ddf0f%2D65ac47e89145&amp;originalPath=aHR0cHM6Ly9ncnVwb21ldGEtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwva2FyaW5lX3NpbHZhX21ldGFfY29tX2JyL0VxWU53ZjM0dkQ5TGs2UUNZR3BzeW1zQnMxWGt5emV4bU5NLTk0VENkQ3dTclE%5FcnRpbWU9NV9NN2lpamwxMGc&amp;sortField=Modified&amp;isAscending=false&amp;id=%2Fpersonal%2Fkarine%5Fsilva%5Fmeta%5Fcom%5Fbr%2FDocuments%2FDIGITAL%20CENTER%2F1%2E%20SICREDI%2FCONTAS%20A%20PAGAR%2FContas%20a%20Pagar%20%2D%20Lan%C3%A7amentos%2F3%2E%20Performance%20por%20usu%C3%A1rio%2FPerfomance%20Diaria">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -74,7 +74,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="edf69072134a31da0296a94f6e8054f9" Selector="&lt;webctrl id='header1-dateModifiedColumn_164-name' tag='SPAN' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="edf69072134a31da0296a94f6e8054f9" Selector="&lt;webctrl id='header1-dateModifiedColumn_*-name' tag='SPAN' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
