@@ -74,7 +74,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="edf69072134a31da0296a94f6e8054f9" Selector="&lt;webctrl id='header1-dateModifiedColumn_*-name' tag='SPAN' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="edf69072134a31da0296a94f6e8054f9" Selector="&lt;webctrl id='header*-name' tag='SPAN' idx='3' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
