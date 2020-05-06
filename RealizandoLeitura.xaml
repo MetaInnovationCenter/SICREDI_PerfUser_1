@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>700,1444</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>807,1444</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RealizandoLeitura_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -73,7 +73,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:ReadRange AddHeaders="True" DataTable="[dt_perfomanceUsuario]" DisplayName="Read Tabela Perfomance Usuario" sap:VirtualizedContainerService.HintSize="668,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="datatables\Performance_Usuario.XLSX">
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_perfomanceUsuario]" DisplayName="Read Tabela Perfomance Usuario" sap:VirtualizedContainerService.HintSize="668,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Perfomance_Usuario.XLSX">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
