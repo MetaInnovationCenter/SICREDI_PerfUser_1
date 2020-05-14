@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>770,519</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>770,333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PerfUser_InitSystems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -283,11 +283,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadRange>
-            <ui:ReadRange AddHeaders="True" DataTable="[ARGO_dt_colaboradoresId]" DisplayName="Read Tabela Colaboradores" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Plan1" WorkbookPath="datatables\Colaboradores e Id.xlsx">
+            <ui:ReadRange AddHeaders="True" DataTable="[ARGO_dt_colaboradoresId]" DisplayName="Read Tabela Colaboradores" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Plan1" WorkbookPath="datatables\Colaboradores e Id.xlsx">
               <ui:ReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -312,7 +312,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,207</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch Open Browser" sap:VirtualizedContainerService.HintSize="548,1390" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch Open Browser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

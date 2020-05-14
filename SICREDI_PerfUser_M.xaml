@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>650,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>770,801</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -82,14 +82,10 @@
           <av:PointCollection x:Key="ConnectorLocation">300,262.5 300,284.02</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Init_PerfUser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="init_close_process\PerfUser_InitSystems.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Init_PerfUser" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="init_close_process\PerfUser_InitSystems.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_colaboradoresId">
-            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_colaboradoresId" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_perfomanceUsuario">
-            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_perfomanceUsuario" />
-          </OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_colaboradoresId">[dt_colaboradoresId]</OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_perfomanceUsuario">[dt_perfomanceUsuario]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -103,20 +99,14 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,284.02</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,335.02 300,364.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,335.02 300,374.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="RealizandoLeitura" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="RealizandoLeitura.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="RealizandoLeitura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="RealizandoLeitura.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="ArgO_dt_performanceUsuario">
-                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="ArgO_dt_performanceUsuario" />
-              </OutArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_colaboradoresId">
-                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_colaboradoresId" />
-              </InArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_perfomanceUsuario">
-                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_perfomanceUsuario" />
-              </InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="ArgO_dt_performanceUsuario">[ArgO_dt_performanceUsuario]</OutArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_colaboradoresId">[dt_colaboradoresId]</InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_perfomanceUsuario">[dt_perfomanceUsuario]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,7 +118,7 @@
             <FlowStep x:Name="__ReferenceID0">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,364.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">200,374.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
