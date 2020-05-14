@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>754,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>650,801</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -52,11 +52,16 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ARGO_PerformanceTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_colaboradoresId" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_perfomanceUsuario" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -79,7 +84,12 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Init_PerfUser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="init_close_process\PerfUser_InitSystems.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_colaboradoresId">
+            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_colaboradoresId" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_perfomanceUsuario">
+            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_perfomanceUsuario" />
+          </OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -96,9 +106,17 @@
               <av:PointCollection x:Key="ConnectorLocation">300,335.02 300,364.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="RealizandoLeitura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="RealizandoLeitura.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="RealizandoLeitura" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="RealizandoLeitura.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="ArgO_dt_performanceUsuario">[ArgO_dt_performanceUsuario]</OutArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="ArgO_dt_performanceUsuario">
+                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="ArgO_dt_performanceUsuario" />
+              </OutArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_colaboradoresId">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_colaboradoresId" />
+              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="ARGI_dt_perfomanceUsuario">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_perfomanceUsuario" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
