@@ -1,6 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ArgO_dt_performanceUsuario" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="ArgO_data" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -34,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,6 +56,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -82,10 +84,17 @@
           <av:PointCollection x:Key="ConnectorLocation">300,162.5 300,212.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Init_PerfUser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="init_close_process\PerfUser_InitSystems.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Init_PerfUser" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="init_close_process\PerfUser_InitSystems.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_colaboradoresId">[dt_colaboradoresId]</OutArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_perfomanceUsuario">[dt_perfomanceUsuario]</OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_colaboradoresId">
+            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_colaboradoresId" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="ARGO_dt_perfomanceUsuario">
+            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_perfomanceUsuario" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="dateTime">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ArgO_data" />
+          </OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
